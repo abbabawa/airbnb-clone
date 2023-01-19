@@ -1,9 +1,13 @@
 //https://www.youtube.com/watch?v=1k3HxJRBVgI
-import { Box, CssBaseline } from "@mui/material";
+import { Box, Container, CssBaseline } from "@mui/material";
 import Header from "./components/Header";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import OptionsTab from "components/OptionsTab";
+import LocationCards from "components/LocationCards";
+import Footer from "components/Footer";
+import FooterMenu from "components/FooterMenu";
+import { displayOnDesktop } from "themes/commonStyles";
 
 // const router = createBrowserRouter([
 //   {
@@ -23,6 +27,23 @@ function App() {
           <Header />
           <OptionsTab />
         </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            flexGrow: 1,
+            height: 100,
+            overflowY: "scroll",
+          }}
+        >
+          <Container maxWidth={"xl"} sx={{ mb: 3 }}>
+            <LocationCards />
+          </Container>
+        </Box>
+        <Box sx={{display: {xs: 'flex', md: 'none'}}}>
+          <FooterMenu />
+        </Box>
+        <Box sx={displayOnDesktop}><Footer /></Box>
       </Box>
     </React.Fragment>
   );
