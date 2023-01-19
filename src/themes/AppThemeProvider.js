@@ -22,7 +22,7 @@ const theme = createTheme({
     MuiTypography: {
       defaultProps: {
         sx: { px: 1 },
-        variants: "subtitle2",
+        variant: "subtitle2",
         textTransform: "capitalize",
       },
     },
@@ -52,7 +52,7 @@ const theme = createTheme({
             p: 0,
             disableRipple: true,
         },
-        variants: 'text'
+        variant: 'text'
     },
     MuiTab: {
         defaultProps: {
