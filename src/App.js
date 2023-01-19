@@ -8,6 +8,7 @@ import LocationCards from "components/LocationCards";
 import Footer from "components/Footer";
 import FooterMenu from "components/FooterMenu";
 import { displayOnDesktop } from "themes/commonStyles";
+import MobileFooter from "components/MobileFooter";
 
 // const router = createBrowserRouter([
 //   {
@@ -38,6 +39,9 @@ function App() {
         >
           <Container maxWidth={"xl"} sx={{ mb: 3 }}>
             <LocationCards />
+            <Box sx={{display: {sx: 'flex', md: 'none'}}}>
+              <MobileFooter />
+            </Box>
           </Container>
         </Box>
         <Box sx={{display: {xs: 'flex', md: 'none'}}}>
