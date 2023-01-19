@@ -8,7 +8,7 @@ import {
   flexBetweenCenter,
 } from "themes/commonStyles";
 import LocationSearch from "./LocationSearch";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import MobileSearch from "./MobileSearch";
 import ProfileSettings from "./ProfileSettings";
 
@@ -38,8 +38,9 @@ const Header = () => {
           <Box sx={displayOnDesktop}>
             <ProfileSettings />
           </Box>
-          <Box sx={{display: {xs: 'flex', md: 'none'}}}>
-          <MobileSearch /></Box>
+          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+            <MobileSearch />
+          </Box>
         </Box>
       </Container>
     </Box>

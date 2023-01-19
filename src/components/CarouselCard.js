@@ -1,8 +1,9 @@
-import { Architecture, KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
+import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 import { Box, Button, MobileStepper, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import SwipeableViews from "react-swipeable-views";
 import {
   carouselDot,
@@ -31,11 +32,12 @@ const CarouselCard = ({ location }) => {
     setActiveStep(step);
   };
   return (
-    <Box className="carouselCard" sx={{ flexGrow: 1, position: "relative" }}>
+    <Box className="carouselCard" sx={{ flexGrow: 1, position: "relative", cursor: 'pointer' }}>
       <Box sx={fixedIcon}>
         <FaRegHeart size={24} color={"#FFF"} />
       </Box>
       {location.locationImages.length && (
+        <Link to="/room">
         <SwipeableViews
           axis={"x"}
           index={activeStep}
@@ -55,6 +57,7 @@ const CarouselCard = ({ location }) => {
             );
           })}
         </SwipeableViews>
+        </Link>
       )}
       <Box sx={fixedBottom}>
         <MobileStepper
