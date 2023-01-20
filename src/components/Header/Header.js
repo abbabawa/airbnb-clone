@@ -11,8 +11,9 @@ import LocationSearch from "./LocationSearch";
 import Logo from "../Logo";
 import MobileSearch from "./MobileSearch";
 import ProfileSettings from "./ProfileSettings";
+import GeneralSearch from "./GeneralSearch";
 
-const Header = () => {
+const Header = ({searchComponent, maxWidth}) => {
   return (
     <Box
       sx={{
@@ -21,7 +22,7 @@ const Header = () => {
         border: "1px solid #ddd",
       }}
     >
-      <Container maxWidth={"xl"}>
+      <Container maxWidth={maxWidth ? maxWidth : "xl"} sx={{}}>
         <Box
           sx={{
             ...flexBetweenCenter,
@@ -33,7 +34,7 @@ const Header = () => {
             <Logo />
           </Box>
           <Box sx={displayOnDesktop}>
-            <LocationSearch />
+            {searchComponent == "generalSearch" ? <GeneralSearch /> : <LocationSearch />}
           </Box>
           <Box sx={displayOnDesktop}>
             <ProfileSettings />
