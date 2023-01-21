@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { BsUpload } from "react-icons/bs";
-import { FaRegHeart, FaUpload } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 
 const PageTitle = () => {
   return (

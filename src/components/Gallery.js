@@ -1,14 +1,18 @@
 import { Box } from "@mui/material";
 import React from "react";
 
-const Gallery = ({images}) => {
+const containerStyles = {
+  width: "50%",
+  height: "100%",
+  overflow: "hidden",
+};
+
+const Gallery = ({ images }) => {
   return (
     <Box sx={{ px: 4, display: "flex", height: 300, mt: 2 }}>
       <Box
         sx={{
-          width: "50%",
-          height: "100%",
-          overflow: "hidden",
+            ...containerStyles,
           borderTopLeftRadius: 10,
           borderBottomLeftRadius: 10,
         }}
@@ -21,8 +25,7 @@ const Gallery = ({images}) => {
       </Box>
       <Box
         sx={{
-          width: "50%",
-          overflow: "hidden",
+          ...containerStyles,
           borderTopRightRadius: 10,
           borderBottomRightRadius: 10,
           display: "grid",
@@ -32,12 +35,14 @@ const Gallery = ({images}) => {
           pl: 1,
         }}
       >
-        {images.map(image=>(<img
+        {images.map((image) => (
+          <img
             key={image.id}
-          src={image.url}
-          alt="location image"
-          style={{ width: "100%" }}
-        />))}
+            src={image.url}
+            alt="location image"
+            style={{ width: "100%" }}
+          />
+        ))}
       </Box>
     </Box>
   );

@@ -1,17 +1,13 @@
 import React from 'react'
 import { Box, Container, CssBaseline } from "@mui/material";
-import OptionsTab from "components/OptionsTab";
-import LocationCards from "components/LocationCards";
-import Footer from "components/Footer";
 import FooterMenu from "components/FooterMenu";
-import { displayOnDesktop } from "themes/commonStyles";
-import MobileFooter from "components/MobileFooter";
 import Header from "components/Header/Header";
 import PageTitle from 'components/PageTitle';
 import Gallery from 'components/Gallery';
 
 
 import { locations } from "data/mock-data";
+import DetailSection from 'components/DetailSection';
 
 const RoomPage = () => {
   return (
@@ -34,6 +30,7 @@ const RoomPage = () => {
           <Container maxWidth={"lg"} sx={{ mb: 3, }} >
             <PageTitle />
             <Gallery images={locations[1].locationImages} />
+            <DetailSection />
             {/* <LocationCards /> */}
             {/* <Box sx={{display: {sx: 'flex', md: 'none'}}}>
               <MobileFooter />
@@ -43,7 +40,7 @@ const RoomPage = () => {
         <Box sx={{display: {xs: 'flex', md: 'none'}}}>
           <FooterMenu />
         </Box>
-        <Box sx={displayOnDesktop}><Footer /></Box>
+        {/* <Box sx={displayOnDesktop}><Footer /></Box> */}
       </Box>
     </React.Fragment>
   )
