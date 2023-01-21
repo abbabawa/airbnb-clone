@@ -5,18 +5,19 @@ import React from "react";
 import { AiOutlineCar, AiOutlineRight } from "react-icons/ai";
 import { BiAlarmOff, BiCoffee } from "react-icons/bi";
 import {
+  FaFlag,
   FaHotel,
   FaRegCalendar,
   FaRegHeart,
   FaRegStar,
   FaStar,
 } from "react-icons/fa";
-import { flexBetween } from "themes/commonStyles";
+import { flexBetween, flexCenter } from "themes/commonStyles";
 import CostCard from "./CostCard";
 
 const DetailSection = () => {
   return (
-    <Box sx={{ px: 4, mt: 4 }}>
+    <Box sx={{ px: 4, mt: 4, pb: 4, borderBottom: '1px solid #DDD' }}>
       <Grid container>
         <Grid item xs={8} sx={{ pr: 12 }}>
           <Box
@@ -157,7 +158,7 @@ const DetailSection = () => {
               </Typography>
             </Button>
           </Box>
-          <Box sx={{ pb: 5, borderBottom: "1px solid #DDD" }}>
+          <Box sx={{ pb: 5 }}>
             <Box>
               <h2 style={{ marginBottom: 1 }}>5 nights in Joncherey</h2>
               <Box sx={{ display: "flex", pl: 0 }}>
@@ -169,7 +170,15 @@ const DetailSection = () => {
           </Box>
         </Grid>
         <Grid item xs={4} sx={{}}>
-          <CostCard />
+          <Box sx={{ position: "sticky", top: "14%" }}>
+            <CostCard />
+            <Box sx={{...flexCenter, mt: 3}}>
+              <FaFlag />
+              <Typography variant="span" sx={{ textAlign: "center", ml: 2, textDecoration: 'underline' }}>
+                Report this listing
+              </Typography>
+            </Box>
+          </Box>
         </Grid>
       </Grid>
     </Box>

@@ -8,6 +8,7 @@ import Gallery from 'components/Gallery';
 
 import { locations } from "data/mock-data";
 import DetailSection from 'components/DetailSection';
+import Review from 'components/Review';
 
 const RoomPage = () => {
   return (
@@ -31,6 +32,7 @@ const RoomPage = () => {
             <PageTitle />
             <Gallery images={locations[1].locationImages} />
             <DetailSection />
+            <Review />
             {/* <LocationCards /> */}
             {/* <Box sx={{display: {sx: 'flex', md: 'none'}}}>
               <MobileFooter />
