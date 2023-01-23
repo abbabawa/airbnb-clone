@@ -1,8 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
-import { BsShieldCheck, BsShieldFillCheck } from "react-icons/bs";
-import { FaRegStar } from "react-icons/fa";
+import { BsShieldFillCheck } from "react-icons/bs";
 
 const AboutHost = () => {
   return (

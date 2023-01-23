@@ -1,8 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { AiFillCaretRight, AiOutlineRight } from "react-icons/ai";
 import { BiChevronRight } from "react-icons/bi";
-import { BsCaretRight } from "react-icons/bs";
 
 const ThingsToKnow = () => {
   return (
