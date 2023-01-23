@@ -10,6 +10,7 @@ import { locations } from "data/mock-data";
 import DetailSection from 'components/DetailSection';
 import Review from 'components/Review';
 import AboutHost from 'components/AboutHost';
+import ThingsToKnow from 'components/ThingsToKnow';
 
 const RoomPage = () => {
   return (
@@ -35,6 +36,7 @@ const RoomPage = () => {
             <DetailSection />
             <Review />
             <AboutHost />
+            <ThingsToKnow />
             {/* <LocationCards /> */}
             {/* <Box sx={{display: {sx: 'flex', md: 'none'}}}>
               <MobileFooter />
