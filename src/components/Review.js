@@ -3,7 +3,7 @@ import React from "react";
 
 const Review = () => {
   return (
-    <Box sx={{ px: 4 }}>
+    <Box sx={{ px: 4, pb: 4, borderBottom: '1px solid #ddd' }}>
       <h2 style={{ marginBottom: 1 }}>2 reviews</h2>
       <Typography sx={{}}>
         Average rating will appear after 3 reviews
@@ -12,6 +12,7 @@ const Review = () => {
         <ReviewItem />
         <ReviewItem />
       </Box>
+      <Typography sx={{ mt: 2, textDecoration: "underline", textDecoration: 'underline', fontWeight: 800 }}>Show more</Typography>
     </Box>
   );
 };
@@ -32,7 +33,7 @@ const ReviewItem = () => {
         Magnifique! The photos of this listing do not do this huge treehouse
         justice. You have a tree house complete with toilet and sink and a
       </Typography>
-      <Typography sx={{ mt: 2, textDecoration: "underline", textDecoration: 'underline' }}>Show more</Typography>
+      
     </Box>
   );
 };
